@@ -1,0 +1,50 @@
+/**
+body {
+    background: rgba(231, 224, 224, 0.925);
+}
+
+.table-fixed {
+    margin-left: 25rem;
+    margin-top: 10rem;
+}
+
+.table-fixed thead,
+.table-fixed thead>th {
+    background: rgb(147, 201, 53);
+    color: #fff;
+}
+
+.table-fixed tbody tr td {
+    background: honeydew;
+}
+
+.table-fixed>thead>tr>th {
+    border: 0 !important;
+}
+
+.table-fixed>tbody>tr>td:last-child {
+    border-right: 0;
+}
+
+.table-fixed tbody td,
+.table-fixed thead>tr>th {
+    float: left;
+    font-size: 14px;
+    padding-left: 20px !important;
+}
+
+.table-fixed .col {
+    width: 25%;
+}
+
+.table-fixed tbody {
+    display: block;
+    height: 150px;
+    overflow-y: auto;
+}
+
+.table-fixed tr {
+    display: block;
+}
+
+*/

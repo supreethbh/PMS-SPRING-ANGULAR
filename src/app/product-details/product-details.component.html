@@ -1,0 +1,25 @@
+
+<div class="container-fluid col-md-4">
+    <br>
+    <h4 style="text-align: center; color: rgb(12, 145, 12);">PRODUCT DETAILS</h4>
+    <hr>
+    <div *ngIf="product">
+      <div>
+          <label><b>Product ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;
+          </b></label>{{product.productId}}
+      </div>
+      <div>
+          <label><b>Product Name&nbsp;&nbsp;:&nbsp;&nbsp;  
+          </b></label>{{product.productName}}
+      </div>
+      <div>
+          <label><b>Product Price &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;
+          </b></label>{{product.productPrice | currency:'INR' }}
+      </div>
+      <hr>
+    </div>
+</div>
+
+<div class="form-group text-center">
+  <button (click)="gotoList()" class="btn btn-primary">Back to Product List</button>
+</div>

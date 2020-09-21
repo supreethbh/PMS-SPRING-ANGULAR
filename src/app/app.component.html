@@ -1,0 +1,71 @@
+<nav class="navbar navbar-dark navbar-expand-lg static-top" style="background-color: #0a0330;">
+    <a class="navbar-brand" href="#">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9rZi8gnJMkuXJcbfmpJ6ziMUqOW3sfynJGg&usqp=CAU" 
+        width="125" height="35" class="d-inline-block align-top" alt="">  
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse font-weight-bolder" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" 
+              *ngIf="loginservice.isUserLoggedIn()" routerLink="/home">HOME
+              <span class="sr-only">(current)</span>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()" routerLink="/insert">INSERT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()" routerLink="/update">UPDATE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()" routerLink="/delete">DELETE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()" routerLink="/showAll">SHOW-PRODUCTS</a>
+        </li>
+      </ul>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="!loginservice.isUserLoggedIn()" routerLink="/login">LOGIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()" routerLink="/logout">LOGOUT</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" routerLink="/register">REGISTER</a>
+            </li>-->
+        </ul>
+    </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="margin-left: 10px;width: 160px;">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+</nav>
+
+<div class="container">
+  <br>
+  <!--<h2 style="text-align: center;">{{title}}</h2>
+  <hr> #D5D8DC-->
+  <div class="card">
+    <div class="card-block" style="background-color: #eef2f7;">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<div class="fixed-bottom text-center">
+    <footer class="footer">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="background-color: #0a0330; color: lavender;">
+        © 2020 Copyright:
+        <a href="https://spring.io/"> Supreeth Gowda</a>
+    </div>
+    <!-- Copyright -->
+    </footer>
+</div>
